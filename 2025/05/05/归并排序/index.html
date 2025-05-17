@@ -302,7 +302,7 @@ queueMicrotask(() => {
   const initWaline = (Fn) => {
     const waline = Fn(Object.assign({
       el: '#waline-wrap',
-      serverURL: 'https://sy-comments-qkoovkync-sunnyday2333s-projects.vercel.app/',
+      serverURL: 'https://sy-comments.vercel.app/',
       pageview: false,
       dark: 'html[data-theme="dark"]',
       path: window.location.pathname,
@@ -379,7 +379,7 @@ queueMicrotask(() => {
 
   const getComment = async () => {
     try {
-      const res = await fetch('https://sy-comments-qkoovkync-sunnyday2333s-projects.vercel.app/api/comment?type=recent&count=6', { method: 'GET' })
+      const res = await fetch('https://sy-comments.vercel.app/api/comment?type=recent&count=6', { method: 'GET' })
       const result = await res.json()
       const walineArray = result.data.map(e => {
         return {
